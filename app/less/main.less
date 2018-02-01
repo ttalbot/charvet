@@ -1,0 +1,112 @@
+@import "yo.less";
+
+.header {
+  margin-bottom: 30px;
+  img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+}
+
+.container > .jumbotron {
+  height: 200px;
+  overflow: hidden;
+  padding: 0;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.footer {
+  h4 {
+    color: #000;
+    font-size: 14px;
+  }
+  div {
+    text-transform:uppercase;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  img {
+    height: 80px;
+    float: none;
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .container > .jumbotron {
+    height: 350px;
+  }
+  .footer {
+    div {
+      border-right: 1px solid #BBB;
+      text-align: left;
+      margin-bottom: none;
+      &:last-child {
+        border: none;
+      }
+      img {
+        float: right;
+      }
+    }
+  }
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-color: transparent;
+    background-position: center center;
+  }
+  #soleil {
+    background-image: url('../images/soleil.jpg');
+  }
+  #chemises {
+    background-image: url('../images/chemises.jpg');
+  }
+  #identite {
+    background-image: url('../images/identite.jpg');
+  }
+  #boutique {
+    background-image: url('../images/boutique.jpg');
+  }
+}
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: 1s ease-in all;
+  -moz-transition: 1s ease-in all;
+  -o-transition: 1s ease-in all;
+  transition: 1s ease-in all;
+  display: block!important;
+} 
+.slide.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+.slide.ng-hide-add {
+  opacity: 1;
+}
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
